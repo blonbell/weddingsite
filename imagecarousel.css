@@ -1,0 +1,92 @@
+#main-container {
+    width:70%; 
+	margin: auto;
+}
+
+#image-container {
+    left:150px;
+    top:100px;
+    position:relative;
+	height:400px;
+}
+
+#nextButton {
+    padding:40px;
+    background-image:url('images/up.png');
+    top:30px;
+    left:500px;
+    position:relative;
+}
+
+#prevButton {
+    padding:40px;
+    background-image:url('images/up.png');
+}
+
+img.large-img {
+	width:500px;
+	height:350px;
+	position:absolute;
+	display:none;
+    border-color: #9e00ed;
+    box-shadow: 0 0 25px #9e00ed;
+	border-radius:15px;
+}
+
+header {
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+
+#navbar {
+    text-align: center;
+    width: 900px;
+    margin: auto;
+    padding-bottom: 5px;
+    line-height: 50px;
+}
+
+ul.nav-list {
+    width: 100%;
+    list-style: none outside none;
+    display:inline;
+    text-align: center;
+}
+
+ul.nav-list > li {
+    border-right: 0.5px solid grey;
+    margin: 0;
+    display: inline;
+}
+
+ul.nav-list > li > a {
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'PT Sans',sans-serif;
+    text-decoration: none;
+    padding: 0 64px;
+}
+
+#story-container {
+    margin-top:100px;
+}
+
+p#story-title {
+    font-family: Rage;
+    font-size: 4em;
+
+}
+
+p#story-content {
+    padding-left:40px;
+    font-family: 'Californian FB';
+    font-size: 1.4em;
+}
+
+.grad1 {
+    height:60px;
+    background: -webkit-linear-gradient(#F291FF, #FFCCCC); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F291FF, #FFCCCC); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F291FF, #FFCCCC); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F291FF, #FFCCCC); /* Standard syntax (must be last) */
+}

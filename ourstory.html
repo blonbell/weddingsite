@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="imagecarousel.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/readXML.js"></script>
+<script> 
+    var showIndex = 1;
+    var maxIndex = 9;
+
+    $(document).ready(function () {
+        $("img#img" + showIndex).show();
+        refreshStoryDesc();
+
+		$("#prevButton").click(function() {
+		    var position = $("img#img" + showIndex).position();
+		    var x = position.left - 100;
+		    var y = position.top + 25;
+		    $("img#img" + showIndex).animate({ left: x + "px", top: y + "px", opacity: '0.0' },
+			{
+			    duration: 1800,
+			    complete: function () {
+			        $(this).hide();
+			    }
+			});
+
+		    showIndex--;
+		    if (showIndex <= 0) {
+		        showIndex = maxIndex;
+		    }
+		    $("img#img" + showIndex).show().css({ "opacity": "0", "left": "", "top": "" });
+		    $("img#img" + showIndex).animate({ opacity: '1.0' },
+			{
+			    duration: 2300,
+			    complete: function () {
+			    }
+			});
+
+		    refreshStoryDesc();
+		});
+	
+		$("#nextButton").click(function(){
+		    var position = $("img#img" + showIndex).position();
+			var x = position.left + 100;
+			var y = position.top - 25;
+			$("img#img"+showIndex).animate({left: x+"px", top: y+"px", opacity:'0.0'}, 
+			{ duration: 1800,
+			  complete: function() {
+			      $(this).hide();
+			  }
+			});
+			
+			showIndex++;
+			if (showIndex >= (maxIndex + 1)) {
+				showIndex = 1;
+			}
+			$("img#img" + showIndex).show().css({ "opacity": "0", "left": "", "top": "" });
+			$("img#img"+showIndex).animate({ opacity:'1.0' }, 
+			{ duration: 2300,
+			  complete: function() {
+			  }
+			});
+
+			refreshStoryDesc();
+		});
+
+        // Retrieves the story of current index
+		function refreshStoryDesc() {
+		    var storyContents = readFile("storycontents/story" + showIndex + ".xml");
+		    $("p#story-title").text(storyContents.getElementsByTagName("title")[0].textContent);
+		    $("p#story-content").text(storyContents.getElementsByTagName("content")[0].textContent);
+		}
+	});
+</script> 
+
+<title>Our Story</title>
+</head>
+
+<body>
+    <div id="bodyDiv">
+        <header class="grad1">
+            <div id="navbar">
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <hr>
+   
+        <div id="main-container">
+            <a id="nextButton">Next</a>
+            <div id="image-container">
+	            <img id="img1" class="large-img" src="images/carousel/1.jpg" alt="WeddingPhotos" />
+	            <img id="img2" class="large-img" src="images/carousel/2.jpg" alt="WeddingPhotos" />
+	            <img id="img3" class="large-img" src="images/carousel/3.jpg" alt="WeddingPhotos" />
+	            <img id="img4" class="large-img" src="images/carousel/4.jpg" alt="WeddingPhotos" />
+	            <img id="img5" class="large-img" src="images/carousel/5.jpg" alt="WeddingPhotos" />
+	            <img id="img6" class="large-img" src="images/carousel/6.jpg" alt="WeddingPhotos" />
+	            <img id="img7" class="large-img" src="images/carousel/7.jpg" alt="WeddingPhotos" />
+	            <img id="img8" class="large-img" src="images/carousel/8.jpg" alt="WeddingPhotos" />
+	            <img id="img9" class="large-img" src="images/carousel/9.jpg" alt="WeddingPhotos" />
+            </div>
+        
+            <a id="prevButton">Previous</a>  
+            <div id="story-container">
+                <p id="story-title" aria-selected="undefined"></p>
+                <p id="story-content"></p>
+            </div> 
+        </div>
+    </div>
+</body>
+
+</html>
