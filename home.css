@@ -1,0 +1,38 @@
+﻿#ronxcherrymsg {
+    left: 200px;
+    top: 100px;
+    min-width:500px;
+}
+
+#datemsg {
+    font-size: 3em;
+    left: 360px;
+    top: 230px;
+    min-width:200px;
+}
+
+#main-container {
+    /* background-color: #FFFFFF; 
+       border-left: dashed 4px #a6cc8e;
+       border-right: dashed 4px #a6cc8e;
+        
+        */
+    height: 800px;
+    min-height: 600px;    
+}
+
+.medium-symbol {
+    font-size: 0.5em;
+    color: #e9ade5;
+}
+
+.big-heart {
+    font-size: 1.3em;
+    color: #f70e0e;
+}
+
+#announceDiv {
+    position: absolute;
+    left: 500px;
+    top: 500px;
+}

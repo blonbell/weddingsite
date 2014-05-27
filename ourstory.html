@@ -2,17 +2,25 @@
 <html>
 <head>
 <link href="imagecarousel.css" rel="stylesheet" type="text/css">
+<link href="master.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/readXML.js"></script>
 <script> 
     var showIndex = 1;
     var maxIndex = 9;
+    var transition = false;
 
     $(document).ready(function () {
         $("img#img" + showIndex).show();
         refreshStoryDesc();
 
-		$("#prevButton").click(function() {
+        $("#prevButton").click(function () {
+            if (transition) {
+                return;
+            }
+            var btn = $(this);
+            btn.css("color", "red");
+            transition = true;
 		    var position = $("img#img" + showIndex).position();
 		    var x = position.left - 100;
 		    var y = position.top + 25;
@@ -33,16 +41,24 @@
 			{
 			    duration: 2300,
 			    complete: function () {
+			        transition = false;
+			        btn.css("color", "");
 			    }
 			});
 
 		    refreshStoryDesc();
 		});
 	
-		$("#nextButton").click(function(){
+        $("#nextButton").click(function () {
+            if (transition) {
+                return;
+            }
+            var btn = $(this);
+            btn.css("color", "red");
+            transition = true;
 		    var position = $("img#img" + showIndex).position();
 			var x = position.left + 100;
-			var y = position.top - 25;
+			var y = position.top + 25;
 			$("img#img"+showIndex).animate({left: x+"px", top: y+"px", opacity:'0.0'}, 
 			{ duration: 1800,
 			  complete: function() {
@@ -57,7 +73,9 @@
 			$("img#img" + showIndex).show().css({ "opacity": "0", "left": "", "top": "" });
 			$("img#img"+showIndex).animate({ opacity:'1.0' }, 
 			{ duration: 2300,
-			  complete: function() {
+			  complete: function () {
+			      transition = false;
+			      btn.css("color", "");
 			  }
 			});
 
@@ -79,22 +97,25 @@
 <body>
     <div id="bodyDiv">
         <header class="grad1">
-            <div id="navbar">
+            <div id="navbartop" class="navbar">
                 <nav>
                     <ul class="nav-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="home.html"><span class="big-symbol"/>👫</span> Home</a></li>
+                        <li><a href="#"><span class="big-symbol"/>&#9835;</span> Our Story</a></li>
+                        <li><a href="#"><span class="big-symbol"/>🎊</span> Schedule</a></li>
+                        <li><a href="#"><span class="big-symbol"/>&#9998;</span> Guestbook</a></li>
                     </ul>
                 </nav>
             </div>
+            
         </header>
-        
-        <hr>
-   
+        <div id="left-banner">
+            <img src="images/left-banner.png" />
+        </div>
+
+        <div id="ourstorymsg" class="paraTitle">Our Story</div>
+
         <div id="main-container">
-            <a id="nextButton">Next</a>
             <div id="image-container">
 	            <img id="img1" class="large-img" src="images/carousel/1.jpg" alt="WeddingPhotos" />
 	            <img id="img2" class="large-img" src="images/carousel/2.jpg" alt="WeddingPhotos" />
@@ -107,12 +128,26 @@
 	            <img id="img9" class="large-img" src="images/carousel/9.jpg" alt="WeddingPhotos" />
             </div>
         
-            <a id="prevButton">Previous</a>  
+            <a id="prevButton">Previous</a> 
+            <a id="nextButton">Next</a> 
             <div id="story-container">
                 <p id="story-title" aria-selected="undefined"></p>
                 <p id="story-content"></p>
             </div> 
         </div>
+
+        <footer class="grad1">
+            <div id="navbarbot" class="navbar">
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="home.html"><span class="big-symbol"/>👫</span> Home</a></li>
+                        <li><a href="#"><span class="big-symbol"/>&#9835;</span> Our Story</a></li>
+                        <li><a href="#"><span class="big-symbol"/>🎊</span> Schedule</a></li>
+                        <li><a href="#"><span class="big-symbol"/>&#9998;</span> Guestbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
     </div>
 </body>
 
