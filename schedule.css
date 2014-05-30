@@ -1,0 +1,137 @@
+﻿body {
+    margin: 0px;
+    background-color: #c8c8c8
+}
+
+#main-container {
+    margin: 0 auto;
+}
+
+#logoDiv {
+    width: 920px;
+    margin: 0 auto;
+    padding-left:60px;
+    padding-right:60px;
+}
+
+#logo {
+    width:100%;
+}
+
+#menu {
+    width: 100%;
+}
+
+ul.nav-list {
+    list-style: none outside none;
+    display:inline;
+    text-align: center;
+    padding-left: 0px;
+}
+
+ul.nav-list > li {
+    margin-top:10px;
+    margin-bottom:10px;
+    border-right: 1px solid grey;
+    display: inline-block;
+    width: 180px;
+}
+
+ul.nav-list > li:last-child {
+    border-right: none;
+}
+
+ul.nav-list > li > a {
+    color: #acc1b0;
+    display: inline-block;
+    padding: 10px;
+    font-size: 14pt;
+    font-family: 'PT Sans',sans-serif;
+    text-decoration: none;
+    
+}
+
+ul.nav-list > li > a[href="#"] {
+    color: #d6bea8;
+}
+
+ul.nav-list > li > a:hover {
+    background: -webkit-linear-gradient(#475d7e, #232222); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#475d7e, #232222); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#475d7e, #232222); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#475d7e, #232222); /* Standard syntax (must be last) */
+}
+.grad1 {
+    height: 100%;
+    min-height: 70px;
+    background: -webkit-linear-gradient(#10309c, #161c39); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#10309c, #161c39); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#10309c, #161c39); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#10309c, #161c39); /* Standard syntax (must be last) */
+}
+
+#articleDiv {
+    width: 920px;
+    min-width:920px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.googleMap {
+    margin: 0px 30px 30px 30px; 
+    width:470px;
+    height:330px;
+}
+
+section {
+    width: 530px;
+    background-color: #e3e09f;
+    border: 5px double;
+    border-bottom-style: groove;
+    border-right-style: groove;
+}
+
+section.sectLeft {
+    position:relative;
+    left: 70px;
+}
+
+section.sectRight {
+    position: relative;
+    left: 300px;
+}
+
+.sectImg {
+    padding: 10px;
+    width:250px;
+    height:150px;
+    float:left;
+}
+
+p.sectPHeader {
+    padding: 10px;
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+p.sectP {
+    float: left;
+    padding-left: 15px;
+    
+}
+p.sectP {
+    float: left;
+    padding-left: 15px;
+    
+}
+
+.sectDirections {
+    font-size: 1.6em;
+    text-decoration: underline;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+div.separator {
+    margin: 0 auto;
+}

@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <link href="home.css" rel="stylesheet" type="text/css" />
+    <link href="guestbook.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <title>Welcome</title>
-    <script> 
+    <title>Guestbook</title>
+    <script>
         var s = 'images/wallpapers/';
         var imgArray = [s + "air.jpg", s + "blankcanvas.jpg", s + "bridepink.jpg", s + "golden.jpg"];
 
@@ -17,7 +18,7 @@
         $(document).ready(function () {
             var front = $("#front"),
                 back = $("#back");
-            
+
             var r = 1, tempR = 0;
             function fader() {
                 front.fadeTo(0, 1).attr("src", imgArray[tempR]).fadeTo(1300, 0);
@@ -54,12 +55,25 @@
         </svg>
     </div>
 
-    <div id="lDiv">
-        <div id = "infoBox">
-            <p id="pHeader">Ron & Cherry</p>
-            <p id="pDate">August 2015</p>
-            <p id="pLoc">Vancouver, British Columbia</p>
-        </div>
+    <div id="slogan">Guestbook</div>
+
+    <div id="twitterDiv">
+        <a class="twitter-timeline"  href="https://twitter.com/search?q=%23ronery"  data-widget-id="471794832340291584">Tweets about "#ronery"</a>
+        <script>
+            !function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + "://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+        </script>
     </div>
 </body>
 </html>
+
+
+

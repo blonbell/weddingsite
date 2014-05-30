@@ -1,0 +1,109 @@
+﻿html, body, #bodyDiv {
+    margin: 0px;
+    height: 100%;
+    background-color: #99c980;
+}
+
+#navbarLeft {
+    position: fixed;
+    top: 0px;
+    background-image: url("images/repeatHearts2.jpg");
+    width: 300px;
+    height: 100%;
+    border-right: 2.5px groove;
+    z-index: 2;
+}
+
+ul.nav-list {
+    border-radius: 20px;
+    margin: 10px 15px 10px 15px;
+    padding: 20px;
+    background-color: rgba(8, 0, 0, 0.8);
+    list-style: none outside none;
+}
+
+ul.nav-list > li {
+    font-size: 2.2em;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.nav-list > li > a {
+    text-decoration: none;
+    line-height:60px;
+    color: #fff;
+}
+
+ul.nav-list > li > a[href~="#"] {
+    color: #f0d84a;
+    font-weight: bold;
+}
+
+ul.nav-list > li > a:hover {
+    font-weight: bold;
+}
+
+#topSlogan {
+    width: 100%;
+    min-width: 900px;
+    position: fixed;
+    top: 0px;
+    z-index: 30;
+    font-size: 5em;
+    padding: 0px 20px 10px 20px;
+    font-family: 'Estrangelo Edessa';
+}
+
+#inter1 {
+    float: left;
+    width: 260px;
+    color: #21951c;
+    text-align: right;
+    text-shadow: -1px -1px 2px #99c980,  
+                  1px -1px 2px #99c980,
+                 -1px 1px 2px #99c980,
+                  1px 1px 2px #99c980;
+}
+
+#inter2 {
+    float: left;
+    margin-left: 45px;
+    color: #e3e7cc;
+    text-shadow: -1px -1px 2px #808080,  
+                  1px -1px 2px #808080,
+                 -1px 1px 2px #808080,
+                  1px 1px 2px #808080;
+}
+
+#logoImg {
+    width: 200px;
+    height: 200px;
+    margin: 50px 50px 0px 50px;
+    border-radius: 100px;
+    box-shadow: 10px 10px 30px #650a6c;
+}
+
+#main-container {
+    position: absolute;
+    min-width: 500px;
+    left: 340px;
+    top: 130px;
+    z-index: 0;
+}
+
+div.announceDiv {
+    padding: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding-left:20px;
+}
+
+p.pHeader {
+    font-size: 2em;
+    margin:0px;
+}
+
+p.pText {
+    font-size: 1.4em;
+    padding-bottom:30px;
+}

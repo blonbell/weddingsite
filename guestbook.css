@@ -1,0 +1,26 @@
+﻿#twitterDiv {
+    width: 60%;
+    min-width: 400px;
+    margin: 0px auto;
+    padding-left: 70px;
+    margin-top: 110px;
+}
+
+#slogan {
+    font-size: 5em;
+    font-family: 'Arabic Typesetting';
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    position: relative;
+    left: 40px;
+    top: 40px;
+    font-size: 5em;
+    transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg);
+    -webkit-transform:rotate(-15deg);
+    width:350px;
+}
+
+#twitter-widget-0 {
+    height:500px;
+    
+}

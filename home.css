@@ -1,38 +1,77 @@
-﻿#ronxcherrymsg {
-    left: 200px;
-    top: 100px;
-    min-width:500px;
+﻿body {
+    margin: 0px;
+    padding: 0px;
 }
 
-#datemsg {
-    font-size: 3em;
-    left: 360px;
-    top: 230px;
-    min-width:200px;
+#background-container {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 1100px;
+    height: 100%;
 }
 
-#main-container {
-    /* background-color: #FFFFFF; 
-       border-left: dashed 4px #a6cc8e;
-       border-right: dashed 4px #a6cc8e;
-        
-        */
-    height: 800px;
-    min-height: 600px;    
+#front, #back {
+    margin: 0px;
+    position: fixed;
+    width: 100%;
+    min-width: 900px;
 }
 
-.medium-symbol {
-    font-size: 0.5em;
-    color: #e9ade5;
+#front {
+    z-index: -1;
+}
+#back {
+    z-index: -5;
 }
 
-.big-heart {
-    font-size: 1.3em;
-    color: #f70e0e;
+#menu {
+    float:right;
 }
 
-#announceDiv {
-    position: absolute;
-    left: 500px;
-    top: 500px;
+
+text.navigation {
+    fill: #62e8c9; 
+    font-size: 1.3em; 
+    font-family: 'Bell MT', Arial, Verdana;
+}
+
+a.pen:hover {
+    line-height:1.1em;
+    stroke-width:2px;
+    stroke: #62e8c9;
+    fill: #fff;
+}
+
+#lDiv {
+    position: relative;
+    top: 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#infoBox {
+    text-align:center;
+    padding: 5px;
+    width: 350px;
+    margin: 0 auto;
+    
+    border-radius:20px;
+	color: #62e8c9;
+}
+
+#pHeader {
+    margin-top:10px;
+    font-size:2.4em;
+    font-family: "Lucida Calligraphy", Arial, Verdana;
+}
+
+#pDate {
+    line-height:0px;
+    font-size: 1.4em;
+    font-family: 'Harlow Solid', Arial, Verdana;
+}
+
+#pLoc {
+    font-size: 1.4em;
+    font-family: 'Harlow Solid', Arial, Verdana;
 }

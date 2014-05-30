@@ -4,8 +4,7 @@ body {
 }
 
 div#bodyDiv {
-    min-width: 1200px;
-    max-width: 1500px;
+    min-width: 1400px;
     height: 100%;
     min-height: 850px;
     background-position: 0px 0px;
@@ -48,7 +47,7 @@ header, footer {
 /* Navigation CSS */
 .navbar {
     text-align: center;
-    width: 1000px;
+    width: 1400px;
     margin: auto;
     padding-bottom: 5px;
     line-height: 50px;
