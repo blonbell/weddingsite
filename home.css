@@ -1,4 +1,8 @@
-﻿body {
+﻿html {
+	min-width: 600px;
+}
+
+body {
     margin: 0px;
     padding: 0px;
 }
@@ -26,7 +30,8 @@
 }
 
 #menu {
-    float:right;
+    position:fixed;
+	right:0px;
 }
 
 
